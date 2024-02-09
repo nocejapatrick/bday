@@ -304,6 +304,13 @@
         left: 50%;
         transform: translateX(-50%);
       }
+      #my-video{
+        display: none;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+      }
     </style>
   </head>
   <body>
@@ -327,10 +334,17 @@
     <div class="click-cake-container">
       <div class="custom-text">Click the Cake</div>
     </div>
+
+    <div id="my-video">
+      <iframe id="my-iframe" width="960" height="515" src="https://www.youtube.com/embed/fBkn6qZ07_E?si=WzuvajDb6R2dSp7a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
     <script>
       const cake = document.querySelector(".cake");
       cake.addEventListener("click", () => {
-        window.location.href = "/video.html";
+        let vid = document.querySelector("#my-video");
+        let iframe = document.querySelector('#my-iframe');
+        iframe.src +="?autoplay=1";
+        vid.style.display = 'block';
       });
     </script>
   </body>
