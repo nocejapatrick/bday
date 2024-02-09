@@ -4,12 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>This is for you only</title>
-    <style></style>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        width: 100vw;
+        background: black;
+      }
+      video{
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%,-50%);
+        width: 400px;
+        margin:auto;
+      }
+      div{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+      }
+    </style>
   </head>
   <body>
-    <video src="">
-      <source src="movie.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <div>
+      <iframe width="960" height="515" src="https://www.youtube.com/embed/fBkn6qZ07_E?si=WzuvajDb6R2dSp7a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+ 
   </body>
 </html>
