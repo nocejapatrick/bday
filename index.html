@@ -300,16 +300,27 @@
       }
       .click-cake-container {
         position: absolute;
-        bottom: 38%;
+        bottom: 10%;
         left: 50%;
         transform: translateX(-50%);
       }
       #my-video{
         display: none;
+        width: 100%;
         position: absolute;
         top:50%;
         left:50%;
         transform: translate(-50%,-50%);
+      }
+      #my-video iframe{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        max-width:960px;
+        margin: auto;
+        height: 400px;
+        width: 98%;
       }
     </style>
   </head>
@@ -336,7 +347,7 @@
     </div>
 
     <div id="my-video">
-      <iframe id="my-iframe" width="960" height="515" src="https://www.youtube.com/embed/fBkn6qZ07_E?si=WzuvajDb6R2dSp7a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe id="my-iframe" src="https://www.youtube.com/embed/fBkn6qZ07_E?si=WzuvajDb6R2dSp7a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <script>
       const cake = document.querySelector(".cake");
